@@ -74,10 +74,7 @@ La API de Apple Podcasts no permite requests desde el browser por CORS.
 Browser → localhost:5173/api/top-podcasts → Vite Proxy → itunes.apple.com
 ```
 
-**Producción**: pendiente. Opciones evaluadas:
-1. **Vercel Serverless Function** — recomendada: sin dependencias de terceros, misma lógica del proxy.
-2. **allorigins.win** — simple pero depende de infraestructura de terceros; no recomendada para producción.
-3. **Backend propio** — válido si la app escala y se necesita autenticación u otras funcionalidades server-side.
+**Producción**: pendiente de implementar. La opción recomendada es una Vercel Serverless Function — hace el fetch a Apple desde el servidor, sin restricciones de CORS, sin dependencias de terceros y gratis en el tier de Vercel. Se dejó pendiente para priorizar la funcionalidad core.
 
 ---
 
@@ -147,11 +144,13 @@ Se usó Zustand para el texto de búsqueda en Home en lugar de `useState` local.
 
 ## Decisiones pendientes / Mejoras futuras
 
-- Diferenciar mensajes de error por código HTTP: el `httpClient` ya captura y lanza cualquier error no 200 (400, 404, 500, etc.) y TanStack Query lo expone via `isError`. Sin embargo, el mensaje que ve el usuario es genérico. La mejora sería mostrar mensajes distintos según el código — por ejemplo "Podcast no encontrado" para 404 o "Error del servidor, intenta más tarde" para 500. Se dejó pendiente para priorizar funcionalidad core.
-
+- Diferenciar mensajes de error por código HTTP: el `httpClient` ya captura y lanza cualquier error no 2xx (400, 404, 500, etc.) y TanStack Query lo expone via `isError`. Sin embargo, el mensaje que ve el usuario es genérico. La mejora sería mostrar mensajes distintos según el código.
 - Persistencia de caché en localStorage con `@tanstack/query-persist-client`
-- Proxy de producción con Vercel Serverless Function
+- Proxy de producción con Vercel Serverless Function para resolver CORS sin el proxy de Vite
 - Virtualización de listas largas de episodios con `react-virtual`
-- Error Boundary global
-- Internacionalización con `react-i18next`
-- CI con GitHub Actions
+- Mensajes de error diferenciados por código HTTP (404, 500, sin red)
+
+
+## Test unitarios
+
+- se crearon los test unitarios a nivel de cada archivo correspondiente debido al tiempo y al numero de archivos dentro de esta SPA, se puede tener como mejora furuta mover dichos test a una carpeta /test a nivel de src y allí replicar la estructura de carpetas de /src, de esa forma si el proyecto crece podemos tener mas orden en los test de cada archivo

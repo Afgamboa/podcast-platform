@@ -1,5 +1,7 @@
 # Podcast Platform
 
+![CI](https://github.com/Afgamboa/podcast-platform/actions/workflows/ci.yml/badge.svg)
+
 Mini plataforma web para descubrir, consultar y reproducir episodios de podcasts musicales usando la API pública de Apple Podcasts.
 
 ## Stack
@@ -46,9 +48,7 @@ Los hooks se instalan automáticamente al correr `npm install`.
 
 ## Variables de entorno
 
-| Variable | Descripción | Requerida |
-|---|---|---|
-| `VITE_API_BASE_URL` | URL base para el proxy de la API | Solo en producción |
+Esta app no requiere variables de entorno para desarrollo — el proxy CORS está configurado directamente en `vite.config.ts`. En producción, la URL de la API dependería de la estrategia de hosting elegida (Vercel Functions, backend propio, etc.).
 
 ## Arquitectura
 
@@ -59,3 +59,12 @@ Ver [ARCHITECTURE.md](./ARCHITECTURE.md) para decisiones técnicas y trade-offs.
 - El proxy CORS solo funciona en desarrollo. En producción se requiere una solución de servidor (Vercel function, etc.)
 - La API de Apple limita los episodios a 20 por podcast
 - La duración de algunos episodios no está disponible en la API y se muestra como N/A
+
+## Posibles mejoras futuras
+
+- Persistencia del caché en localStorage con `@tanstack/query-persist-client` para que los datos sobrevivan recargas de página
+- Proxy de producción con Vercel Serverless Functions para resolver CORS sin depender del proxy de Vite
+- Virtualización de listas largas de episodios con `react-virtual` para mejorar performance con muchos items
+- Mensajes de error diferenciados por código HTTP (404, 500, sin conexión)
+- Lighthouse report integrado en CI
+- Storybook para documentación visual de componentes
