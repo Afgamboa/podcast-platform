@@ -1,16 +1,24 @@
-# React + Vite
+# Podcast Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini plataforma web para descubrir, consultar y reproducir episodios de podcasts musicales usando la API pública de Apple Podcasts.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** + **TypeScript** (strict)
+- **Vite** — bundler y dev server
+- **React Router v7** — routing del lado del cliente
+- **TanStack Query v5** — caché, fetching y sincronización de datos
+- **Zustand** — estado global del cliente (filtro de búsqueda)
+- **MUI (Material UI)** — componentes y estilos, con BEM en clases personalizadas
+- **DOMPurify** — sanitización de HTML en descripciones de episodios
+- **Vitest** + **React Testing Library** — testing
 
-## React Compiler
+## Requisitos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js >= 18
+- npm >= 9
 
-## Expanding the ESLint configuration
+## Instalación
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
