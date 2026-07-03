@@ -31,6 +31,9 @@
   padding: 1rem;
   border-radius: 10px;
   font-family: "Lucida Console", "Courier New", monospace;
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
 .episode-detail__description a {

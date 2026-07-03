@@ -5,7 +5,7 @@ import LanguageSwitcher from './LanguageSwitch'
 const Layout = () => (
   <>
     <AppBar position="static" color="default" elevation={1}>
-      <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: '#4B5563', color: 'antiquewhite' }}>
+      <Toolbar sx={{ justifyContent: 'space-between', backgroundColor: '#171427', color: 'antiquewhite' }}>
         <Typography
           component={Link}
           to="/"
