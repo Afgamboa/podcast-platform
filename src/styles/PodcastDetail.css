@@ -1,0 +1,24 @@
+.podcast-detail__loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.podcast-detail__table-container {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+   scrollbar-width: none;
+}
+
+.podcast-detail__error {
+  margin-top: 32px;
+}
+
+.podcast-detail__episodes {
+  padding: 16px;
+}
+
+.podcast-detail__episodes-title {
+  margin-bottom: 16px !important;
+  font-weight: 700 !important;
+}

@@ -1,0 +1,41 @@
+.episode-detail__loading {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.episode-detail__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.episode-detail__back {
+  align-self: flex-start;
+}
+
+.episode-detail__meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.episode-detail__player {
+  width: 100%;
+}
+
+.episode-detail__description {
+  line-height: 1.7;
+  background: antiquewhite;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.episode-detail__description a {
+  color: inherit;
+}

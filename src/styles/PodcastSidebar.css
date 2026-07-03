@@ -1,0 +1,25 @@
+.podcast-sidebar {
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 16px;
+}
+
+.podcast-sidebar__image {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.podcast-sidebar__info {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 12px;
+  color: antiquewhite;
+}
+
+.podcast-sidebar__description {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 12px;
+  color: antiquewhite;
+}

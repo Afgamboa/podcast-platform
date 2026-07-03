@@ -1,0 +1,29 @@
+{
+  "notFound": {
+    "title": "Página No Encontrada",
+    "message": "La página que buscas no existe.",
+    "backHome": "Volver al inicio"
+  },
+  "home": {
+    "title": "Podcasts",
+    "filterPlaceholder": "Filtrar por título o autor...",
+    "resultsCount": "{{count}} resultados encontrados",
+    "empty": "Ningún podcast coincide con tu búsqueda.",
+    "errorMessage": "Error al cargar los podcasts.",
+    "retry": "Reintentar"
+  },
+  "podcastDetail": {
+    "episodes": "Episodios",
+    "episodeCount": "{{count}} episodios",
+    "errorMessage": "Error al cargar el podcast.",
+    "backToPodcast": "Volver al podcast",
+    "dateColumn": "Fecha",
+    "durationColumn": "Duración"
+  },
+  "episode": {
+    "errorMessage": "Episodio no encontrado.",
+    "published": "Publicado",
+    "duration": "Duración",
+    "noDescription": "No hay mucho que decir, solo dale play y disfruta."
+  }
+}
